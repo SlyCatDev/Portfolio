@@ -1,0 +1,231 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    background: linear-gradient(to bottom right, #1b1b2f, #111927, #0D2847, #003362);
+    color: white;
+    font-family: "K2D", Noto Sans Grantha, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Light Theme Styles */
+body.light-theme {
+    background: linear-gradient(to bottom right, #FBFDFF, #F4FAFF, #E6F4FE, #D5EFFF);
+    color: #000000;
+}
+
+/* Root Variables */
+:root {
+    --text-color-light: #000000;
+    --text-color-dark: #ffffff;
+}
+
+/* Navbar Styles */
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #f0f0f0;
+    display: flex;
+    align-items: center;
+}
+.navbar-toggler{
+    border: none;
+}
+.navbar-toggler-icon {
+    background-color: white;
+}
+
+body.light-theme .navbar-brand {
+    color: #000000;
+}
+    
+body.light-theme .navbar-nav .nav-link {
+    color: #000000;
+}
+
+.navbar-nav .nav-link {
+    color: #f0f0f0;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background-color: transparent;
+    border: none;
+    color: #f0f0f0; /* Couleur par défaut pour le thème sombre */
+    font-size: 1.2rem;
+}
+body.light-theme .theme-toggle i {
+    color: #000000; /* Couleur de l'icône du soleil en noir */
+}
+
+/* Hero Section Styles */
+.hero-text h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+.hero-text p {
+    font-size: 1.2rem;
+}
+
+/* Image Styles */
+.rounded-img {
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px;
+}
+/* Button Styles */
+.theme-toggle {
+    background-color: transparent;
+    border: none;
+    color: #f0f0f0;
+    font-size: 1.2rem;
+}
+.btn-cv {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    outline: none;
+}
+.btn-cv:hover {
+    background-color: #020F1C;
+    color: #fff;
+}
+body.light-theme .btn-cv {
+    background-color: #020F1C; 
+    color: #fff; 
+}
+body.light-theme .btn-cv:hover {
+    background-color: #fff; 
+    color: #020F1C; 
+}
+
+/* Button contact Styles */
+.btn-contact {
+    background-color: #003362; /* Couleur de fond */
+    color: #ffffff; /* Couleur du texte */
+    padding: 10px 20px; /* Espacement interne */
+    border-radius: 30px; /* Coins arrondis */
+    border: none; /* Supprime la bordure */
+    font-size: 1.2rem; /* Taille de la police */
+    transition: background-color 0.3s ease; /* Transition pour le changement de couleur */
+    margin-left: 10px; /* Espace entre le bouton CV et le bouton Contactez-moi */
+}
+
+.btn-contact:hover {
+    background-color: #005080; /* Couleur de fond au survol */
+}
+
+
+/* Skills Section Styles */
+.skills-section {
+    margin-top: 50px;
+}
+.skill {
+    background-color: #2e2e3b;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+}
+.skill i {
+    margin-right: 8px;
+}
+body.light-theme .skill {
+    background-color: #e0e0e0; 
+    color: #000000;
+}
+
+
+
+/* Projects Section Styles */
+
+.projects-section {
+    margin-top: 50px;
+}
+.project {
+    display: flex; /* Utilise flexbox pour aligner les éléments */
+    align-items: flex-start; /* Aligne les éléments en haut */
+    background-color: #2e2e3b; /* Couleur de fond pour chaque projet */
+    color: #ffffff; /* Couleur du texte */
+    border-radius: 15px; /* Coins arrondis */
+    padding: 20px; /* Espacement interne */
+    margin-bottom: 20px; /* Espacement entre les projets */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre pour le projet */
+}
+
+body.light-theme .project {
+    background-color: #e0e0e0; /* Couleur de fond pour les projets en thème sombre */
+    color: #000000; /* Couleur du texte pour le thème sombre */
+}
+
+.project h3 {
+    margin-bottom: 10px; /* Espacement en dessous du titre */
+}
+
+.project p {
+    margin-bottom: 15px; /* Espacement en dessous de la description */
+}
+
+.project ul {
+    list-style-type: none; /* Enlève les puces */
+    padding: 0; /* Enlève le padding par défaut */
+    margin-top: 10px; /* Espace au-dessus de la liste */
+}
+
+.project li {
+    background-color: #444; /* Couleur de fond pour les éléments de la liste */
+    color: #ffffff; /* Couleur du texte */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 5px 10px; /* Espacement interne */
+    margin-bottom: 5px; /* Espacement entre les éléments de la liste */
+    display: inline-block; /* Permet aux éléments de s'afficher en ligne */
+    margin-right: 5px; /* Espace entre les technologies */
+}
+.project a.btn-cv {
+    margin-bottom: 10px; /* Espace entre le bouton et la section technologies */
+}
+
+.project-text {
+    flex: 1; /* Permet au texte de prendre l'espace restant */
+}
+
+.project-image {
+    width: 30%; /* Ajuste la largeur pour qu'elle remplisse le conteneur */
+    height: auto; /* Maintient le ratio d'aspect */
+    border-radius: 10px; /* Coins arrondis pour l'image */
+    margin-bottom: 20px; /* Espace en bas de l'image */
+}
+
+
+@media (max-width: 768px) {
+    .rounded-img {
+        width: 250px; /* Réduit la taille de l'image sur les petits écrans */
+    }
+}
+
+@media (max-width: 768px) { /* Pour les tablettes et mobiles */
+    .project {
+        flex-direction: column; /* Aligne le texte et l'image verticalement */
+    }
+
+    .project-image {
+        width: 100%; /* L'image prend toute la largeur */
+        margin-left: 0; /* Supprime la marge gauche */
+        margin-top: 15px; /* Ajoute un peu d'espace au-dessus de l'image */
+    }
+}
+
+@media (max-width: 576px) { /* Pour les mobiles */
+    .project-image {
+        width: 100%; /* L'image prend toute la largeur */
+        margin-top: 10px; /* Ajuste l'espace au-dessus de l'image */
+    }
+}
