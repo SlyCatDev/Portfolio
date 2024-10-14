@@ -50,6 +50,35 @@ body.light-theme .navbar-nav .nav-link {
     color: #f0f0f0;
 }
 
+/* Navbar Styles */
+
+.social-icons {
+    position: fixed;
+    top: 50%; /* Centre verticalement */
+    right: 20px; /* Positionnement à droite */
+    display: flex;
+    flex-direction: column; /* Empile les icônes verticalement */
+    gap: 10px; /* Espacement entre les icônes */
+}
+
+.social-icons a {
+    color: #f0f0f0; /* Couleur des icônes en thème sombre */
+    font-size: 2rem; /* Taille des icônes */
+    transition: color 0.3s ease; /* Effet de transition sur la couleur */
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Couleur au survol */
+}
+
+body.light-theme .social-icons a {
+    color: #000000; /* Couleur des icônes en thème clair */
+}
+
+body.light-theme .social-icons a:hover {
+    color: #005080; /* Couleur au survol en thème clair */
+}
+
 /* Theme Toggle Button */
 .theme-toggle {
     background-color: transparent;
@@ -72,18 +101,12 @@ body.light-theme .theme-toggle i {
 
 /* Image Styles */
 .rounded-img {
-    width: 400px;
+    width: 380px;
     height: auto;
     border-radius: 20px;
     box-shadow: 0 4px 10px;
 }
 /* Button Styles */
-.theme-toggle {
-    background-color: transparent;
-    border: none;
-    color: #f0f0f0;
-    font-size: 1.2rem;
-}
 .btn-cv {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
@@ -95,7 +118,7 @@ body.light-theme .theme-toggle i {
     outline: none;
 }
 .btn-cv:hover {
-    background-color: #020F1C;
+    background-color: #005080;
     color: #fff;
 }
 body.light-theme .btn-cv {
@@ -109,20 +132,23 @@ body.light-theme .btn-cv:hover {
 
 /* Button contact Styles */
 .btn-contact {
-    background-color: #003362; /* Couleur de fond */
-    color: #ffffff; /* Couleur du texte */
-    padding: 10px 20px; /* Espacement interne */
-    border-radius: 30px; /* Coins arrondis */
-    border: none; /* Supprime la bordure */
-    font-size: 1.2rem; /* Taille de la police */
-    transition: background-color 0.3s ease; /* Transition pour le changement de couleur */
-    margin-left: 10px; /* Espace entre le bouton CV et le bouton Contactez-moi */
+    background-color: #003362; 
+    color: #ffffff; 
+    padding: 10px 20px; 
+    border-radius: 30px; 
+    border: none; 
+    font-size: 1.2rem; 
+    transition: background-color 0.3s ease; 
+    margin-left: 10px; 
 }
 
 .btn-contact:hover {
-    background-color: #005080; /* Couleur de fond au survol */
+    background-color: #005080;
 }
 
+body.light-theme .btn-contact {
+    color: #ffffff;
+}
 
 /* Skills Section Styles */
 .skills-section {
@@ -151,81 +177,109 @@ body.light-theme .skill {
     margin-top: 50px;
 }
 .project {
-    display: flex; /* Utilise flexbox pour aligner les éléments */
-    align-items: flex-start; /* Aligne les éléments en haut */
-    background-color: #2e2e3b; /* Couleur de fond pour chaque projet */
-    color: #ffffff; /* Couleur du texte */
-    border-radius: 15px; /* Coins arrondis */
-    padding: 20px; /* Espacement interne */
-    margin-bottom: 20px; /* Espacement entre les projets */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre pour le projet */
+    display: flex;
+    align-items: flex-start; 
+    background-color: #2e2e3b;
+    color: #ffffff; 
+    border-radius: 15px; 
+    padding: 20px; 
+    margin-bottom: 20px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 body.light-theme .project {
-    background-color: #e0e0e0; /* Couleur de fond pour les projets en thème sombre */
-    color: #000000; /* Couleur du texte pour le thème sombre */
+    background-color: #e0e0e0; 
+    color: #000000;
 }
 
 .project h3 {
-    margin-bottom: 10px; /* Espacement en dessous du titre */
+    margin-bottom: 10px;
 }
 
 .project p {
-    margin-bottom: 15px; /* Espacement en dessous de la description */
+    margin-bottom: 15px;
 }
 
 .project ul {
-    list-style-type: none; /* Enlève les puces */
-    padding: 0; /* Enlève le padding par défaut */
-    margin-top: 10px; /* Espace au-dessus de la liste */
+    list-style-type: none; 
+    padding: 0; 
+    margin-top: 10px; 
 }
 
 .project li {
-    background-color: #444; /* Couleur de fond pour les éléments de la liste */
-    color: #ffffff; /* Couleur du texte */
-    border-radius: 5px; /* Coins arrondis */
-    padding: 5px 10px; /* Espacement interne */
-    margin-bottom: 5px; /* Espacement entre les éléments de la liste */
-    display: inline-block; /* Permet aux éléments de s'afficher en ligne */
-    margin-right: 5px; /* Espace entre les technologies */
+    background-color: #444; 
+    color: #ffffff; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
+    margin-bottom: 5px; 
+    display: inline-block; 
+    margin-right: 5px;
 }
 .project a.btn-cv {
-    margin-bottom: 10px; /* Espace entre le bouton et la section technologies */
+    margin-bottom: 10px; 
 }
 
 .project-text {
-    flex: 1; /* Permet au texte de prendre l'espace restant */
+    flex: 1; 
 }
 
 .project-image {
-    width: 30%; /* Ajuste la largeur pour qu'elle remplisse le conteneur */
-    height: auto; /* Maintient le ratio d'aspect */
-    border-radius: 10px; /* Coins arrondis pour l'image */
-    margin-bottom: 20px; /* Espace en bas de l'image */
+    width: 30%; 
+    height: auto; 
+    border-radius: 10px; 
+    margin-bottom: 20px; 
+}
+
+/* About Section Styles */
+
+.about-section {
+    padding: 50px 0; 
+    background-color: #111927; 
+    color: #f0f0f0; 
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body.light-theme .about-section {
+    background-color: #FBFDFF; 
+    color: #000000; 
 }
 
 
 @media (max-width: 768px) {
     .rounded-img {
-        width: 250px; /* Réduit la taille de l'image sur les petits écrans */
+        width: 250px; 
     }
 }
 
 @media (max-width: 768px) { /* Pour les tablettes et mobiles */
     .project {
-        flex-direction: column; /* Aligne le texte et l'image verticalement */
+        flex-direction: column;
     }
 
     .project-image {
-        width: 100%; /* L'image prend toute la largeur */
-        margin-left: 0; /* Supprime la marge gauche */
-        margin-top: 15px; /* Ajoute un peu d'espace au-dessus de l'image */
+        width: 100%;
+        margin-left: 0; /
+        margin-top: 15px; /
     }
 }
 
-@media (max-width: 576px) { /* Pour les mobiles */
+@media (max-width: 576px) { /* Pour les mobiles uniquement */
     .project-image {
-        width: 100%; /* L'image prend toute la largeur */
-        margin-top: 10px; /* Ajuste l'espace au-dessus de l'image */
+        width: 100%; 
+        margin-top: 10px; 
     }
 }
