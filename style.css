@@ -269,7 +269,7 @@ body.light-theme .about-section {
 }
 
 .contact-card {
-    background-color: #1b1b2f;
+    background-color: #111927;
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -300,7 +300,7 @@ body.light-theme .contact-card {
 
 /* Right side - form */
 form {
-    background-color: #1b1b2f;
+    background-color: #111927;
     padding: 20px;
     border-radius: 10px;
 }
@@ -387,7 +387,7 @@ body.light-theme .footer {
     color: #000000; 
 }
 
-
+/* Media Queries */
 @media (max-width: 768px) {
     .rounded-img {
         width: 250px; 
