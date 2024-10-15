@@ -53,15 +53,17 @@ body.light-theme .navbar-nav .nav-link {
 /* Navbar Styles */
 .social-icons {
     position: fixed;
-    top: 50%; 
+    top: 50%;
     right: 20px; 
+    bottom: 20px;
+    z-index: 5;
     display: flex;
-    flex-direction: column; 
-    gap: 10px; 
+    flex-direction: column;
+    gap: 10px;
 }
 
 .social-icons a {
-    color: #f0f0f0; 
+    color: #fff;
     font-size: 2rem;
     transition: color 0.3s ease;
 }
@@ -218,6 +220,7 @@ body.light-theme .project {
 
 .project-text {
     flex: 1; 
+    margin-right : 20px;
 }
 
 .project-image {
@@ -254,7 +257,7 @@ body.light-theme .about-section {
     color: #000000; 
 }
 
-/* Form Section Styles */
+/* Contact Section Styles */
 
 /* Container */
 .contact-section {
@@ -277,6 +280,7 @@ body.light-theme .about-section {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 body.light-theme .contact-card {
@@ -296,73 +300,6 @@ body.light-theme .contact-card {
 .contact-card p {
     font-size: 0.9rem;
     margin-top: 10px;
-}
-
-/* Right side - form */
-form {
-    background-color: #111927;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-body.light-theme form {
-    background-color: #FBFDFF; 
-    color: #000000; 
-}
-
-form label {
-    color: white;
-}
-
-body.light-theme label {
-    color: #000000; 
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-control {
-    background-color: transparent;
-    color: white;
-    border: 1px solid #666;
-    border-radius: 5px;
-}
-
-body.light-theme .form-control {
-    background-color: #f9f9f9; 
-    color: #000000; 
-    border: 1px solid #ccc; 
-}
-
-.form-control:focus {
-    background-color: transparent;
-    color: white;
-    border-color: #007bff;
-    box-shadow: none;
-}
-
-body.light-theme .form-control:focus {
-    border-color: #003362; 
-    box-shadow: 0 0 5px rgba(0, 51, 98, 0.5);
-}
-
-.form-control::placeholder {
-    color: #aaa;
-    opacity: 1; 
-}
-
-.btn-primary {
-    background-color: #003362;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    color: white;
-    transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
 }
 
 /* Footer Section Styles */
@@ -388,21 +325,36 @@ body.light-theme .footer {
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
-    .rounded-img {
-        width: 250px; 
-    }
-}
-
 @media (max-width: 768px) { /* Pour les tablettes et mobiles */
     .project {
         flex-direction: column;
     }
 
+    .rounded-img {
+        width: 250px; 
+    }
+
     .project-image {
         width: 100%;
-        margin-left: 0; /
-        margin-top: 15px; /
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .social-icons {
+        width: 120px;
+        height: 48px;
+        flex-direction: row;
+        top: auto;
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%);
+        justify-content: space-around;
+        border-radius: 24px 24px 0 0;
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 1px 10px;
+    }
+    body.light-theme .social-icons a {
+        color: #fff; 
     }
 }
 
