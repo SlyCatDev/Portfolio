@@ -363,4 +363,12 @@ body.light-theme .footer {
         width: 100%; 
         margin-top: 10px; 
     }
+    .hero-text h1 {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    .btn-contact {
+        margin-top: 10px; 
+    }
+
 }
