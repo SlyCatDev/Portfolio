@@ -15,10 +15,10 @@
 </head>
 <body>
     <div class="social-icons">
-        <a href="https://github.com/SlyCatDev" target="_blank">
+        <a href="https://github.com/SlyCatDev" target="_blank" aria-label="Mon profil GitHub">
             <i class="fab fa-github"></i>
         </a>
-        <a href="https://linkedin.com/in/sylvain-raveneau" target="_blank">
+        <a href="https://linkedin.com/in/sylvain-raveneau" target="_blank" aria-label="Mon profil LinkedIn">
             <i class="fab fa-linkedin"></i>
         </a>
     </div>
@@ -26,28 +26,27 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <i class="fa-solid fa-terminal" style="margin-right: 8px;"></i>
-            <a class="navbar-brand" href="#about">Sylvain Raveneau</a>
+            <span class="navbar-brand">Sylvain Raveneau</span>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/SlyCatDev" target="_blank">
+                        <a class="nav-link" href="https://github.com/SlyCatDev" target="_blank" aria-label="Mon profil GitHub">
                             <i class="fab fa-github"></i> GitHub
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://linkedin.com/in/sylvain-raveneau" target="_blank">
+                        <a class="nav-link" href="https://linkedin.com/in/sylvain-raveneau" target="_blank" aria-label="Mon profil LinkedIn">
                             <i class="fab fa-linkedin"></i> LinkedIn
                         </a>
                     </li>
                     <li class="nav-item">
-                        <button id="theme-toggle" class="theme-toggle btn btn-outline-light">
+                        <button id="theme-toggle" class="theme-toggle btn btn-outline-light" aria-label="Changer le thème en mode clair">
                             <i class="fas fa-moon"></i>
                         </button>
                     </li>
-
                 </ul>
             </div>
         </div>
@@ -58,8 +57,8 @@
             <div class="col-md-4">
                 <img src="img/NQT - Angers - Photo portrait-ps.jpg" alt="Profil" class="rounded-img img-fluid rounded-3">
             </div>
-            <div class="col-md-8 hero-text">
-                <h1>Bonjour, je suis Sylvain Raveneau</h1>
+            <div class="col-md-8 hero-text ">
+                <h1 id="typewriter">Bonjour, je suis Sylvain Raveneau</h1>
                 <p><strong>Développeur Web</strong><br>passionné par l’informatique et le web</p>
                 <a href="https://slycatdev.github.io/Portfolio/assets/CV_Sylvain_Raveneau.pdf" download class="btn btn-cv">
                     Télécharger mon CV

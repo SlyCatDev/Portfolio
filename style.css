@@ -123,6 +123,10 @@ body.light-theme .theme-toggle i {
     background-color: #005080;
     color: #fff;
 }
+button:focus, a:focus {
+    outline: 2px solid #ffcc00;
+}
+
 body.light-theme .btn-cv {
     background-color: #020F1C; 
     color: #fff; 
