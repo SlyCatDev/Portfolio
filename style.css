@@ -50,7 +50,7 @@ body.light-theme .navbar-nav .nav-link {
     color: #f0f0f0;
 }
 
-/* Navbar Styles */
+/* Social icons Styles */
 .social-icons {
     position: fixed;
     top: 50%;
@@ -325,7 +325,7 @@ body.light-theme .footer {
 }
 
 /* Media Queries */
-@media (max-width: 768px) { /* Pour les tablettes et mobiles */
+@media (max-width: 768px) {
     .project {
         flex-direction: column;
     }
@@ -358,7 +358,7 @@ body.light-theme .footer {
     }
 }
 
-@media (max-width: 576px) { /* Pour les mobiles uniquement */
+@media (max-width: 576px) {
     .project-image {
         width: 100%; 
         margin-top: 10px; 
