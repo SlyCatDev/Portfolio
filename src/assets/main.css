@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Configuration du thème */
+@theme {
+  --font-family-sans: 'Inter', system-ui, sans-serif;
+  
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+}
+
+/* Variables CSS pour thème clair (par défaut) */
+:root {
+  --color-surface: #ffffff;
+  --color-surface-secondary: #f9fafb;
+  --color-text: #111827;
+  --color-text-secondary: #6b7280;
+  --color-border: #e5e7eb;
+}
+
+/* Variables CSS pour thème sombre */
+.dark {
+  --color-surface: #111827;
+  --color-surface-secondary: #1f2937;
+  --color-text: #f9fafb;
+  --color-text-secondary: #d1d5db;
+  --color-border: #374151;
+}
+
+/* Classes utilitaires personnalisées */
+.bg-surface { background-color: var(--color-surface); }
+.bg-surface-secondary { background-color: var(--color-surface-secondary); }
+.text-primary { color: var(--color-text); }
+.text-secondary { color: var(--color-text-secondary); }
+.border-theme { border-color: var(--color-border); }
+
+/* Styles globaux */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Animation d'apparition */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+
+.fade-in-up {
+  animation: fadeInUp 0.3s ease-out forwards;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Responsive pour la timeline */
+@media (max-width: 768px) {
+  .timeline-item {
+    text-align: left;
+  }
+  
+  .timeline-item .order-2 {
+    order: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 1rem;
+  }
+}
