@@ -29,6 +29,8 @@
 
         <!-- Bouton thème + menu mobile -->
         <div class="flex items-center space-x-4">
+            <SocialIcons />
+          
           <ThemeToggle />
           
           <!-- Bouton menu mobile -->
@@ -66,11 +68,13 @@
 <script>
 import { ref, onMounted, onUnmounted } from 'vue'
 import ThemeToggle from '../ui/ThemeToggle.vue'
+import SocialIcons from '../ui/SocialIcons.vue'
 
 export default {
   name: 'AppHeader',
   components: {
-    ThemeToggle
+    ThemeToggle,
+    SocialIcons
   },
   setup() {
     const mobileMenuOpen = ref(false)
