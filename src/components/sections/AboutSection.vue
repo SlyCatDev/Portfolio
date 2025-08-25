@@ -26,7 +26,7 @@
           <!-- Informations personnelles -->
           <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div v-for="info in personalInfo" :key="info.label" class="flex items-center">
-              <span class="font-semibold text-primary-600 w-24">{{ info.label }}:</span>
+              <span class="font-semibold text-primary-600 w-26">{{ info.label }}:</span>
               <span class="text-secondary">{{ info.value }}</span>
             </div>
           </div>
@@ -117,7 +117,6 @@ export default {
     const mainSkills = [
       { name: 'Vue.js' },
       { name: 'Tailwind CSS / Bootstrap' },
-      { name: 'API REST' },
       { name: 'Node.js / Express' },
       { name: 'PostgreSQL / MySQL' },
       { name: 'Sequelize' },

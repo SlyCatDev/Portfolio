@@ -97,12 +97,11 @@ export default {
     const imageLoaded = ref(false)
 
     const name = 'Sylvain Raveneau'
-    const jobTitle = 'Développeur Web FullStack'
-    const description = 'Passionné par l\'informatique et le web, je crée des expériences utilisateur modernes et performantes.'
+    const jobTitle = 'Développeur Web'
+    const description = 'Je souhaite créer un web durable, accessible et performant, tout en plaçant l\'utilisateur au cœur de mes préoccupations.'
     const profileImage = '/img/profile.jpg'
-    const cvUrl = '/assets/CV_Raveneau_Sylvain.pdf'
+    const cvUrl = '/assets/CV_Sylvain_Raveneau.pdf'
 
-    // Liens sociaux
     const socialLinks = [
       {
         name: 'GitHub',
@@ -116,7 +115,6 @@ export default {
       }
     ]
 
-    // Effet typewriter
     const typewriterEffect = () => {
       const text = name
       let index = 0

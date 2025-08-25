@@ -80,7 +80,7 @@ export default {
     const mobileMenuOpen = ref(false)
     const activeSection = ref('hero')
 
-    const name = 'SR'
+    const name = 'Sylvain Raveneau'
     const title = 'Développeur Full Stack'
 
     const navItems = [
