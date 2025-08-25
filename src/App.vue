@@ -11,16 +11,11 @@
       <AboutSection/>
       <SkillsSection/>
       <ProjectSection/>
-      
-      <section id="projects" class="h-screen flex items-center justify-center bg-surface-secondary">
-        <h2 class="text-4xl font-bold text-primary-600">Section Projets</h2>
-      </section>
-      
-      <section id="contact" class="h-screen flex items-center justify-center bg-surface">
-        <h2 class="text-4xl font-bold text-primary-600">Section Contact</h2>
-      </section>
+      <ContactSection/>
+    
     </main>
   </div>
+  <AppFooter />
 </template>
 
 <script>
@@ -30,8 +25,11 @@ import HeroSection from './components/sections/HeroSection.vue'
 import AboutSection from './components/sections/AboutSection.vue'
 import SkillsSection from './components/sections/SkillsSection.vue'
 import ProjectSection from './components/sections/ProjectSection.vue'
+import ContactSection from './components/sections/ContactSection.vue'
+import AppFooter from './components/layout/AppFooter.vue'
 
 import { useScrollAnimation } from './composables/useScrollAnimation'
+
 
 
 export default {
@@ -41,7 +39,9 @@ export default {
     HeroSection,
     AboutSection,
     SkillsSection,
-    ProjectSection
+    ProjectSection,
+    ContactSection,
+    AppFooter
   },
   setup() {
     const { isDark, toggleTheme } = useTheme()
