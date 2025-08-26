@@ -5,8 +5,8 @@
         <!-- Photo profil -->
         <div class="lg:col-span-4 flex justify-center lg:justify-start">
           <div class="relative">
-            <img 
-              :src="profileImage" 
+            <img
+              :src="profileImage"
               :alt="`Photo de ${name}`"
               class="w-80 h-100 object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300 fade-in-up"
               :class="{ 'animate-pulse bg-surface-secondary': !imageLoaded }"
@@ -24,10 +24,7 @@
               <span class="block text-secondary text-xl md:text-2xl font-normal mb-2">
                 Bonjour, je suis
               </span>
-              <span 
-                ref="typewriterRef"
-                class="text-primary-600 typewriter-cursor"
-              >
+              <span ref="typewriterRef" class="text-[var(--color-text)] typewriter-cursor">
                 {{ displayedName }}
               </span>
             </h1>
@@ -42,37 +39,53 @@
             </p>
           </div>
 
-          <!-- Boutons d'action -->
-          <div class="fade-in-up flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" style="animation-delay: 0.6s">
-            <a 
-              :href="cvUrl" 
-              download 
+          <!-- CTA  -->
+          <div
+            class="fade-in-up flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            style="animation-delay: 0.6s"
+          >
+            <a
+              :href="cvUrl"
+              download
               class="inline-flex items-center px-8 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transform hover:scale-105 transition-all duration-200 shadow-lg"
             >
               <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
               </svg>
               Télécharger mon CV
             </a>
-            
-            <button 
+
+            <button
               @click="scrollToContact"
               class="inline-flex items-center px-8 py-3 border-2 border-primary-600 text-primary-600 font-semibold rounded-lg hover:bg-primary-600 hover:text-white transform hover:scale-105 transition-all duration-200"
             >
               <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
               </svg>
               Contactez-moi
             </button>
           </div>
 
           <!-- Réseaux sociaux -->
-          <div class="fade-in-up flex justify-center lg:justify-start space-x-6 mt-8" style="animation-delay: 0.8s">
-            <a 
-              v-for="social in socialLinks" 
+          <div
+            class="fade-in-up flex justify-center lg:justify-start space-x-6 mt-8"
+            style="animation-delay: 0.8s"
+          >
+            <a
+              v-for="social in socialLinks"
               :key="social.name"
-              :href="social.url" 
-              target="_blank" 
+              :href="social.url"
+              target="_blank"
               rel="noopener noreferrer"
               class="text-secondary hover:text-primary-600 transform hover:scale-110 transition-all duration-200"
               :title="social.name"
@@ -88,6 +101,8 @@
 
 <script>
 import { ref, onMounted } from 'vue'
+import profileImage from '@/assets/img/profile.jpg'
+import cvUrl from '@/assets/CV_Sylvain_Raveneau.pdf'
 
 export default {
   name: 'HeroSection',
@@ -98,27 +113,26 @@ export default {
 
     const name = 'Sylvain Raveneau'
     const jobTitle = 'Développeur Web'
-    const description = 'Je souhaite créer un web durable, accessible et performant, tout en plaçant l\'utilisateur au cœur de mes préoccupations.'
-    const profileImage = '/img/profile.jpg'
-    const cvUrl = '/assets/CV_Sylvain_Raveneau.pdf'
+    const description =
+      "Je souhaite créer un web durable, accessible et performant, tout en plaçant l'utilisateur au cœur de mes préoccupations."
 
     const socialLinks = [
       {
         name: 'GitHub',
         url: 'https://github.com/SlyCatDev',
-        icon: 'GitHubIcon'
+        icon: 'GitHubIcon',
       },
       {
         name: 'LinkedIn',
         url: 'https://www.linkedin.com/in/sylvain-raveneau/',
-        icon: 'LinkedInIcon'
-      }
+        icon: 'LinkedInIcon',
+      },
     ]
 
     const typewriterEffect = () => {
       const text = name
       let index = 0
-      
+
       const type = () => {
         if (index < text.length) {
           displayedName.value += text.charAt(index)
@@ -126,7 +140,7 @@ export default {
           setTimeout(type, 100)
         }
       }
-      
+
       type()
     }
 
@@ -135,10 +149,10 @@ export default {
       if (element) {
         const headerHeight = 80
         const elementPosition = element.offsetTop - headerHeight
-        
+
         window.scrollTo({
           top: elementPosition,
-          behavior: 'smooth'
+          behavior: 'smooth',
         })
       }
     }
@@ -157,22 +171,28 @@ export default {
       profileImage,
       cvUrl,
       socialLinks,
-      scrollToContact
+      scrollToContact,
     }
-  }
+  },
 }
 </script>
 
 <style scoped>
 .typewriter-cursor::after {
   content: '|';
-  color: #3b82f6;
+  color: var(--color-text);
   animation: blink 1s infinite;
 }
 
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
 }
 
 /* Animation personnalisée pour les éléments */

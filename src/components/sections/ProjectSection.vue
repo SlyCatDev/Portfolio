@@ -211,6 +211,9 @@
 <script>
 import { ref, computed } from 'vue'
 import ProjectCard from '../ui/ProjectCard.vue'
+import pwaImage from '@/assets/img/projects/pwa-project.png'
+import tripflowImage from '@/assets/img/projects/tripflow-project.jpg'
+import boxesImage from '@/assets/img/projects/boxes-project.png'
 
 export default {
   name: 'ProjectsSection',
@@ -225,16 +228,16 @@ export default {
     const projects = [
       {
         id: 1,
-        title: 'PWA',
+        title: 'Application de gestion de chantiers (FCV)',
         description:
           'Application web progressive avec Vue.js, Node.js et PostgreSQL pour la gestion de chantiers',
         category: 'Web App',
-        status: 'en cours',
-        // image: "/img/projects/pwa-project.jpg",
+        status: 'inProgress',
+        image: pwaImage,
         // demoUrl: "https://demo-pwa.example.com",
         // githubUrl: "https://github.com/username/pwa-project",
         duration: '9 mois',
-        teamSize: 'En équipe (3 développeurs)',
+        teamSize: 'En équipe (2 développeurs)',
         technologies: [
           { name: 'Vue.js', color: '#4FC08D' },
           { name: 'Node.js', color: '#339933' },
@@ -260,7 +263,7 @@ export default {
           "Application mobile de planification et d'organisation de voyages développée avec React Native et Expo",
         category: 'Mobile App',
         status: 'completed',
-        image: '/img/projects/tripflow.jpg',
+        image: tripflowImage,
         githubUrl: 'https://github.com/SlyCatDev/tripflow',
         duration: '2 mois',
         teamSize: 'Solo',
@@ -284,31 +287,32 @@ export default {
       },
       {
         id: 3,
-        title: 'Portfolio Interactif',
+        title: 'Application de location de boxes de stockage',
         description:
-          'Portfolio personnel développé avec Vue.js 3 et Tailwind CSS, mettant en avant mes projets et compétences.',
-        category: 'Portfolio',
+          'Application web développée avec Laravel permettant aux propriétaires de gérer la mise en location de leurs boxes de stockage (suivi des locataires, contrats, paiements et factures).',
+        category: 'Web App',
         status: 'completed',
-        image: '/img/projects/portfolio.jpg',
-        githubUrl: 'https://github.com/SlyCatDev/Portfolio',
-        duration: '1 semaine',
+        image: boxesImage,
+        githubUrl: 'https://github.com/SlyCatDev/appli-location-box',
+        duration: '2 mois',
         teamSize: 'Solo',
         technologies: [
-          { name: 'Vue.js 3', color: '#4FC08D' },
+          { name: 'Laravel', color: '#FF2D20' },
           { name: 'Tailwind CSS', color: '#06B6D4' },
+          { name: 'MySQL', color: '#4479A1' },
           { name: 'Vite', color: '#646CFF' },
-          { name: 'JavaScript', color: '#F7DF1E' },
+          { name: 'GitHub CI/CD', color: '#F7DF1E' },
         ],
         features: [
-          'Design moderne et épuré',
-          'Animations fluides',
-          'Mode sombre/clair',
-          'Navigation smooth scroll',
-          'Responsive design',
-          'Optimisation des performances',
+          'Authentification sécurisée pour les propriétaires',
+          'Gestion des boxes (création, modification, disponibilité)',
+          'Suivi des locataires et des contrats de location',
+          'Suivi des paiements et génération automatique de factures',
+          'Tableau de bord avec indicateurs clés',
+          'Interface responsive et ergonomique',
         ],
         challenges:
-          'Créer une expérience utilisateur engageante tout en maintenant des temps de chargement optimaux et une accessibilité parfaite.',
+          'Mettre en place une architecture robuste pour gérer plusieurs entités (boxes, propriétaires, locataires, contrats, paiements) tout en garantissant la sécurité des données et la simplicité d’utilisation.',
       },
     ]
 

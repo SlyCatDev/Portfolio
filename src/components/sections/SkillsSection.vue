@@ -1,12 +1,13 @@
 <template>
   <section id="skills" class="py-20 bg-surface">
     <div class="container mx-auto px-4">
-      <!-- Titre de section --> 
+      <!-- Titre de section -->
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4 fade-in-up">
-          Mes Compétences
-        </h2>
-        <div class="w-24 h-1 bg-primary-600 mx-auto rounded mt-6 fade-in-up" style="animation-delay: 0.3s"></div>
+        <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4 fade-in-up">Mes Compétences</h2>
+        <div
+          class="w-24 h-1 bg-primary-600 mx-auto rounded mt-6 fade-in-up"
+          style="animation-delay: 0.3s"
+        ></div>
       </div>
 
       <!-- Catégories de compétences -->
@@ -40,7 +41,7 @@
                       class="w-16 h-16 rounded-lg flex items-center justify-center text-3xl"
                       :style="{ backgroundColor: skill.color + '20', color: skill.color }"
                     >
-                      {{ skill.icon }}
+                      <i :class="skill.icon"></i>
                     </div>
                   </div>
 
@@ -77,7 +78,7 @@
                       color: selectedSkill.color,
                     }"
                   >
-                    {{ selectedSkill.icon }}
+                    <i :class="selectedSkill.icon"></i>
                   </div>
                   <div>
                     <h3 class="text-2xl font-bold text-primary">{{ selectedSkill.name }}</h3>
@@ -133,13 +134,13 @@
 
 <script>
 import { ref } from 'vue'
+import 'devicon'
 
 export default {
   name: 'SkillsSection',
   setup() {
     const selectedSkill = ref(null)
 
-    // Configuration des compétences par catégorie
     const skillCategories = [
       {
         name: 'Frontend',
@@ -147,16 +148,20 @@ export default {
         skills: [
           {
             name: 'Vue.js',
-            icon: '⚡',
+            icon: 'devicon-vuejs-plain',
             color: '#4FC08D',
             description:
               'Framework JavaScript progressif pour créer des interfaces utilisateur interactives.',
             experience: 'Vue 3, Options et Composition API, Pinia, Vuetify',
-            projects: ['PWA - Projet FCV (fiche chantier virtuel)', 'Portfolio', "Projet d'étude"],
+            projects: [
+              'PWA - Projet FCV (fiche chantier virtuel)',
+              'Portfolio',
+              "Projet d'étude application frontend",
+            ],
           },
           {
             name: 'JavaScript',
-            icon: '🟨',
+            icon: 'devicon-javascript-plain',
             color: '#F7DF1E',
             level: 80,
             description: 'Langage de programmation pour le développement web moderne.',
@@ -165,7 +170,7 @@ export default {
           },
           {
             name: 'CSS3',
-            icon: '🎨',
+            icon: 'devicon-css3-plain',
             color: '#1572B6',
             level: 90,
             description: 'Langage de style pour la mise en forme et les animations.',
@@ -174,12 +179,23 @@ export default {
           },
           {
             name: 'Tailwind CSS',
-            icon: '🎯',
+            icon: 'devicon-tailwindcss-plain',
             color: '#06B6D4',
             level: 95,
             description: 'Framework CSS utility-first pour un développement rapide.',
             experience: 'Utilisation intensive avec configuration personnalisée',
-            projects: ['Portfolio', 'PWA', 'Dashboard'],
+            projects: ['Portfolio', 'PWA', 'application frontend Vue.js, appli location boxes'],
+          },
+          {
+            name: 'Bootstrap',
+            icon: 'devicon-bootstrap-plain',
+            color: '#7952B3',
+            level: 95,
+            description:
+              'Framework CSS complet pour le développement rapide de sites web responsives.',
+            experience:
+              'Grille responsive, composants, personnalisation SASS, thèmes, JavaScript/jQuery',
+            projects: ["Projet d'étude"],
           },
         ],
       },
@@ -189,7 +205,7 @@ export default {
         skills: [
           {
             name: 'Node.js',
-            icon: '🟢',
+            icon: 'devicon-nodejs-plain',
             color: '#339933',
             level: 80,
             description: 'Runtime JavaScript côté serveur pour des applications scalables.',
@@ -198,30 +214,39 @@ export default {
           },
           {
             name: 'Express.js',
-            icon: '⚫',
+            icon: 'devicon-express-original',
             color: '#000000',
             level: 85,
             description: 'Framework web minimaliste et flexible pour Node.js.',
             experience: "Routing, middleware, gestion d'erreurs, authentification JWT",
-            projects: ['API REST', 'Backend PWA'],
+            projects: ['API Serveur express', 'Backend PWA'],
           },
           {
             name: 'PostgreSQL',
-            icon: '🐘',
+            icon: 'devicon-postgresql-plain',
             color: '#336791',
             level: 75,
             description: 'Base de données relationnelle avancée et open source.',
             experience: 'Requêtes complexes, relations, performances, migrations',
-            projects: ['PWA', 'Dashboard admin'],
+            projects: ['PWA'],
           },
           {
-            name: 'REST API',
-            icon: '🔗',
-            color: '#FF6B6B',
-            level: 85,
-            description: 'Architecture pour créer des services web stateless.',
-            experience: "Design d'APIs, documentation, versioning, tests",
-            projects: ['API PWA', 'Services web'],
+            name: 'Laravel',
+            icon: 'devicon-laravel-plain',
+            color: '#FF2D20',
+            level: 75,
+            description: 'Framework PHP élégant pour le développement web moderne.',
+            experience: 'MVC, Eloquent ORM, Blade, Migrations, Artisan',
+            projects: ['Appli location boxes'],
+          },
+          {
+            name: 'Sequelize',
+            icon: 'devicon-sequelize-plain',
+            color: '#3C76C3',
+            level: 75,
+            description: 'ORM puissant et moderne pour Node.js et bases de données SQL.',
+            experience: 'Modèles, associations, migrations, requêtes avancées, hooks, validations',
+            projects: ['PWA'],
           },
         ],
       },
@@ -231,7 +256,7 @@ export default {
         skills: [
           {
             name: 'WordPress',
-            icon: '📝',
+            icon: 'devicon-wordpress-plain',
             color: '#21759B',
             level: 80,
             description: 'CMS populaire pour créer des sites web personnalisés.',
@@ -240,7 +265,7 @@ export default {
           },
           {
             name: 'Git',
-            icon: '📦',
+            icon: 'devicon-git-plain',
             color: '#F05032',
             level: 85,
             description: 'Système de contrôle de version distribué.',
@@ -249,7 +274,7 @@ export default {
           },
           {
             name: 'Vite',
-            icon: '⚡',
+            icon: 'devicon-vitejs-plain',
             color: '#646CFF',
             level: 80,
             description: 'Build tool moderne et rapide pour les projets frontend.',
@@ -258,12 +283,21 @@ export default {
           },
           {
             name: 'Figma',
-            icon: '🎨',
+            icon: 'devicon-figma-plain',
             color: '#F24E1E',
             level: 75,
             description: 'Outil de design UI/UX collaboratif.',
             experience: 'Prototypage, design system, collaboration en temps réel',
-            projects: ["Design de l'interface utilisateur"],
+            projects: ['PWA', 'Culture Biome', 'Application frontend Vue.js'],
+          },
+          {
+            name: 'Trello',
+            icon: 'devicon-trello-plain',
+            color: '#0079BF',
+            level: 80,
+            description: 'Outil de gestion de projet collaboratif basé sur la méthode Kanban.',
+            experience: 'Organisation de projet, suivi des tâches, collaboration en équipe',
+            projects: ['Culture Biome'],
           },
         ],
       },
@@ -288,11 +322,13 @@ export default {
 }
 
 /* Animation modal */
-.modal-enter-active, .modal-leave-active {
+.modal-enter-active,
+.modal-leave-active {
   transition: all 0.3s ease;
 }
 
-.modal-enter-from, .modal-leave-to {
+.modal-enter-from,
+.modal-leave-to {
   opacity: 0;
   transform: scale(0.9);
 }

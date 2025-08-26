@@ -1,21 +1,17 @@
 <template>
   <div class="min-h-screen bg-surface text-primary">
     <AppHeader />
-    
-    <!-- Sections temporaires pour tester la navigation -->
     <main>
       <section id="hero" class="h-screen flex items-center justify-center bg-surface">
         <HeroSection/>
       </section>
-      
       <AboutSection/>
       <SkillsSection/>
       <ProjectSection/>
       <ContactSection/>
-    
     </main>
+    <AppFooter />
   </div>
-  <AppFooter />
 </template>
 
 <script>

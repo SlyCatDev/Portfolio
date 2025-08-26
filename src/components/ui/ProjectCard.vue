@@ -55,7 +55,7 @@
         <!-- Titre et catégorie -->
         <div class="mb-4">
           <div class="flex items-center justify-between mb-2">
-            <h3 class="text-xl font-bold text-primary group-hover:text-primary-600 transition-colors duration-300">
+            <h3 class="text-base font-bold text-primary group-hover:text-primary-600 transition-colors duration-300">
               {{ project.title }}
             </h3>
             <span class="text-xs text-secondary bg-surface px-2 py-1 rounded-full">
