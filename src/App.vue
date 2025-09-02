@@ -2,9 +2,7 @@
   <div class="min-h-screen bg-surface text-primary">
     <AppHeader />
     <main>
-      <section id="hero" class="h-screen flex items-center justify-center bg-surface">
-        <HeroSection/>
-      </section>
+      <HeroSection/>
       <AboutSection/>
       <SkillsSection/>
       <ProjectSection/>
