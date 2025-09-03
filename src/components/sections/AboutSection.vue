@@ -93,18 +93,16 @@ export default {
       "Développeur passionné par l'humain et l'envie de créer des solutions tournées vers l'avenir"
 
     const aboutText = [
-      "Lors de mon parcours, j'ai été formée pendant deux ans aux fondamentaux du développement web (front-end et back-end), à la gestion de bases de données, au webdesign, ainsi qu'à la conduite de projets digitaux.",
-      "Mon stage de fin de formation au sein d'une agence de communication m'a permis de mettre en pratique ces compétences sur un projet concret, de la conception au développement. Cette première immersion a confirmé mon intérêt pour le métier, et m'a permis de valider mon premier diplôme dans le domaine",
-      "Par la suite, mon parcours professionnel m'a conduit à explorer d'autres secteurs. Mais avec le recul et une démarche de bilan de compétences, il est apparu que ma place était dans le développement web : un domaine en phase avec mes appétences, mes compétences, mes centres d'intérêt et mon envie de construire des solutions concrètes.",
-      "C'est pourquoi j'ai décidé de reprendre ma formation en 2024 pour obtenir le titre professionnel de Concepteur Développeur d'Applications.",
-      "Durant mon alternance, j'ai eu l'opportunité d'être affecté pendant neuf mois à la réalisation d'un projet, de sa conception à son déploiement. Cette expérience a été un vrai tremplin : elle m'a permis de consolider mes compétences techniques, de redécouvrir les réalités du métier sur le terrain, et d'aborder le développement web avec une vision plus globale et plus mature en milieu professionnel.",
+      "Fraîchement diplômé et spécialisé en conception/développement d’applications web (front-end et back-end), je maîtrise divers frameworks et méthodologies agiles.",
+      "Mon parcours, marqué par une alternance et des projets en agence, m’a permis d’acquérir une expérience concrète, de la conception au déploiement, en passant par le design et la gestion de projet.",
+      "Passionné par les défis et la résolution de problèmes, je cultive aussi mes compétences en musculation (10 ans de pratique en salle), en escape games (plus de 30 réalisés), en jeux vidéo action-aventure, et j’aime explorer de nouvelles cultures à travers le voyage. Ces expériences renforcent ma persévérance, mon esprit d’équipe et ma capacité à m’adapter à des environnements variés.",
     ]
 
     const personalInfo = [
       { label: 'Âge', value: '27 ans' },
       { label: 'Localisation', value: 'Angers, France' },
       { label: 'Formation', value: "Concepteur développeur d'applications" },
-      { label: 'Langues', value: 'Français, Anglais (TOEIC 605pts)' },
+      { label: 'Langues', value: 'Français, Anglais' },
     ]
 
     const stats = [
@@ -115,11 +113,11 @@ export default {
     ]
 
     const mainSkills = [
-      { name: 'Vue.js' },
+      { name: 'Vue.js / React' },
       { name: 'Tailwind CSS / Bootstrap' },
       { name: 'Node.js / Express' },
       { name: 'PostgreSQL / MySQL' },
-      { name: 'Sequelize' },
+      { name: 'Git' },
     ]
 
     const timeline = [
