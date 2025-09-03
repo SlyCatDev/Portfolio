@@ -99,7 +99,7 @@
                 <img
                   :src="selectedProject.image"
                   :alt="selectedProject.title"
-                  class="w-full rounded-lg shadow-lg"
+                  class="w-full max-w-80 rounded-lg shadow-lg"
                 />
 
                 <!-- Actions -->
